@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="overlay.min.js"></script>
+		<link rel="stylesheet" href="overlay.min.css" />
+	</head>
+	<body>
+		<h1>Overlay test</h1>
+		<button onclick="overlay.open()">Open</button>
+		<script>
+			var overlay = new Overlay(); //create a new overlay
+
+			var btn_close = document.createElement("button"); //create button to close the overlay
+			btn_close.innerHTML = "Close";
+			btn_close.onclick = overlay.close; //close the overlay
+
+			overlay.content.appendChild(btn_close); //add button to div
+			overlay.content.style.textAlign = "center";
+		</script>
+	</body>
+</html>
